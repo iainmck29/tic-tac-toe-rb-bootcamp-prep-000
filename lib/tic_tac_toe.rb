@@ -56,3 +56,11 @@ def valid_move?(board, position)
  else turn(board)
  end
  end
+
+ def turn_count(board)
+   play_count = 0
+   while play_count < 9
+     turn(board)
+     play_count += 1
+   end
+ end
