@@ -134,5 +134,5 @@ def play
     return winner(board)
   elsif draw?(board)
     return "The game was a draw."
-
-  
+  end
+end
