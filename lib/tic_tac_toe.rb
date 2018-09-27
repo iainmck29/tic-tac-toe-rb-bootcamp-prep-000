@@ -46,12 +46,12 @@ def valid_move?(board, position)
  	end
  end
 
- def turn(board)
+ def turn(board, character)
    puts "Please enter 1-9:"
  input = gets.chomp
  index = input_to_index(input)
  if valid_move?(board, index) == true
-   player_move(board, index)
+   player_move(board, index, character)
    display_board(board)
  else turn(board)
  end
