@@ -51,7 +51,7 @@ def valid_move?(board, position)
  input = gets.chomp
  index = input_to_index(input)
  if valid_move?(board, index) == true
-   player_move(board, index, character = "X")
+   player_move(board, index, character)
    display_board(board)
  else turn(board)
  end
