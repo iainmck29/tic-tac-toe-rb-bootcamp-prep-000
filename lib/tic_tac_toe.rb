@@ -51,18 +51,20 @@ def valid_move?(board, position)
  input = gets.chomp
  index = input_to_index(input)
  if valid_move?(board, index) == true
-   player_move(board, index, character)
+   player_move(board, index, current_player(board))
    display_board(board)
  else turn(board)
  end
  end
 
- def turn_count(board)
-   play_count = 0
-   while play_count < 9
-     turn(board)
-     play_count += 1
+ def turn_count(array)
+   counter = 0
+   array.each do |element|
+     if (element == "X" || element == "O")
+       counter += 1
+     end
    end
+   return counter
  end
 
  def current_player(board)
