@@ -27,3 +27,8 @@ def player_move(board, index, character)
   board[index] = character
   return board
 end
+
+
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
+end
