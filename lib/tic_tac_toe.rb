@@ -130,6 +130,7 @@ end
 def play
   while !over?(board)
     turn(board)
+  end
   elsif won?(board)
     return winner(board)
   elsif draw?(board)
