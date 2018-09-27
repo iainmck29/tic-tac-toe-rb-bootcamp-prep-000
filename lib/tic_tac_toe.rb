@@ -113,7 +113,7 @@ def over?(board)
   end
 end
 
-def winner (board)
+def winner(board)
   index = []
   index = won?(board)
   if index == false
@@ -126,3 +126,13 @@ def winner (board)
     end
   end
 end
+
+def play
+  while !over?(board)
+    turn(board)
+  elsif won?(board)
+    return winner(board)
+  elsif draw?(board)
+    return "The game was a draw."
+
+  
